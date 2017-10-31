@@ -31,14 +31,18 @@ namespace HelloWorld
 
             // 検索ワードの指定
             string searchWord = "ation";
+
+            // キーワード検索
             for (int i = 0; i < lst.Count; i++){
-                if (lst[i].IndexOf(searchWord,StringComparison.Ordinal) != -1)
+                if (lst[i].IndexOf(searchWord,StringComparison.CurrentCulture) != -1)
                 {
+                    // ヒットしたlstのインデックス番号を表示
                     Console.WriteLine("インデックス番号：" + i);
                 }
             }
 
 
+            /*以降は、無視していいです。*/
             // サイトからコピペしたもの
             // https://msdn.microsoft.com/ja-jp/library/ms224425(v=vs.110).aspx
             string s1 = "ani\u00ADmal";
